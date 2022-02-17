@@ -1,7 +1,8 @@
 #[tokio::main]
 async fn main() {
     let url = String::from("https://www.immigration.govt.nz/about-us/covid-19/border-closures-and-exceptions/entry-to-new-zealand/critical-purpose-reasons-you-can-travel-to-new-zealand");
-
+    // TODO: create a list with other URLs, such as :
+    //  - https://covid19.govt.nz/international-travel/travel-to-new-zealand/
     let rt = tokio::runtime::Runtime::new().unwrap();
     rt.block_on( nz::reap(&url));
     //let results = nz::health(&url).await?;
